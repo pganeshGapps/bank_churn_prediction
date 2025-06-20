@@ -36,7 +36,8 @@ if page == "Prediction":
             inputs[feature] = st.number_input(feature, value=0)
     
 
-    X_ = pickle.load(open('models/X_test.pkl',"rb"))
+    #X_ = pickle.load(open('models/X_test.pkl',"rb"))
+    X_ = pd.read_csv("models/X_test.csv")
     probas = model.predict_proba(X_)[:, 1]
     #randomly pick one prediction from probas
     proba_ = np.random.choice(probas)
@@ -70,7 +71,8 @@ elif page == "Feature Importances":
 
     # For LightGBM or if importances is array
     if isinstance(importances, (list, pd.Series, np.ndarray)):
-        X_ = pickle.load(open('models/X_test.pkl',"rb"))
+        #X_ = pickle.load(open('models/X_test.pkl',"rb"))
+        X_ = pd.read_csv("models/X_test.csv")
         # N = 20
         # fig, ax = plt.subplots()
         # ax.barh(feature_importance_names[:N], importances[:N])

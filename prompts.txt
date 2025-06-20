@@ -1,0 +1,16 @@
+Write a python code for 'Bank churn prediction' in jupyter notebook, which will do following:
+
+Read data from local csv. About data: Kaggle bank churn dataset, 10000 samples.
+
+Do required data cleaning and data preparation for ML modelling
+
+add derived features, take references from this notebook
+write code to train a XGBoost model
+code for random forest model
+train lightGBM model
+Create an level-2 model, which uses above 3 models and create ensemble.
+Do evaluations for above 4 methods on train and test dataset.
+Show model selection
+Save all models to local directory
+Show feature importances for selected model
+Add Recommendations derived from feature importances and EDA , which will be presented to business and non-tech teams
